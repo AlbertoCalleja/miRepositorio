@@ -1,5 +1,6 @@
 package paquete;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejecuta {
@@ -11,6 +12,7 @@ public class Ejecuta {
 		 * Alberto Calleja Pascual
 		 * 22-09-2021
 		 */
+		String contenidoArrays;
 		int numeros [];
 		numeros= new int [4];
 		Scanner sc= new Scanner(System.in);
@@ -27,6 +29,18 @@ public class Ejecuta {
 			{
 				System.out.println(numeros[i]);
 			}
+		}
+		//Mostrar la dirección de memoria del array
+		System.out.println(numeros);
+		
+		//Si queremos ver los datos realmente
+		contenidoArrays = Arrays.toString(numeros);
+		System.out.println(contenidoArrays);
+		
+		//Recorremos el array
+		for(int j=0;j<numeros.length;j++)
+		{
+			System.out.println(numeros[j]);
 		}
 	}
 
