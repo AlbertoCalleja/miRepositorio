@@ -11,23 +11,21 @@ public class Ejecuta {
 		 * 
 		 * Alberto Calleja Pascual
 		 */
-		int numero;
+		
 		int resto;
-		Scanner sc= new Scanner(System.in);
+		//Scanner sc= new Scanner(System.in);
 		boolean primo;
 		
-		System.out.println("Introduzca numero");
-		numero=sc.nextInt();
+		//System.out.println("Introduzca numero");
+		//numero=sc.nextInt();
 		
+		for(int numero=1;numero<=100;numero++)
+		{
+			primo=true;
 		if(numero<2)
 		{
 			primo=false;
 		}
-		else
-		{
-			primo=true;
-		}
-	
 		for(int candidatoDivisor=2; candidatoDivisor<numero && primo==true; candidatoDivisor++)
 		{
 			resto = numero%candidatoDivisor;
@@ -38,12 +36,11 @@ public class Ejecuta {
 		}
 		if(primo==true)
 		{
-			System.out.println("Es primo");
+			System.out.println(numero);
 		}	
-		else
-		{
-			System.out.println("No es primo");
+		//sc.close();
 		}
+		
 	}
 
 }
