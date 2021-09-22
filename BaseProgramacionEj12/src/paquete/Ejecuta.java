@@ -14,11 +14,19 @@ public class Ejecuta {
 		int numero;
 		int resto;
 		Scanner sc= new Scanner(System.in);
-		boolean primo= true;
+		boolean primo;
 		
 		System.out.println("Introduzca numero");
 		numero=sc.nextInt();
 		
+		if(numero<2)
+		{
+			primo=false;
+		}
+		else
+		{
+			primo=true;
+		}
 	
 		for(int candidatoDivisor=2; candidatoDivisor<numero && primo==true; candidatoDivisor++)
 		{
