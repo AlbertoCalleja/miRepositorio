@@ -24,20 +24,14 @@ public class Ejecuta {
 		int contEdad=0; //contador
 		int menor=Integer.MAX_VALUE;
 		float media;
-		boolean continuar=true;
 		Scanner sc= new Scanner(System.in);
-			
-		do
+		
+		System.out.println("Introduzca nombre:");
+		nombre=sc.nextLine();
+		
+		while(nombre.equals("fin")==false)
 		{
-			System.out.println("Introduzca nombre:");
-			nombre=sc.nextLine();
-			
-			if(nombre.equals("fin"))
-			{
-				continuar=false;
-			}
-			else
-			{
+
 				System.out.println("Introduzca año de nacimiento:");
 				agnoNacimiento=Integer.valueOf(sc.nextLine());
 				
@@ -50,8 +44,10 @@ public class Ejecuta {
 					menor=edad;
 					nombreMenor=nombre;
 				}
-			}
-		}while(continuar);
+				System.out.println("Introduzca nombre:");
+				nombre=sc.nextLine();
+		}
+		
 		if(contEdad>0)
 		{
 			media=(float)suma/contEdad;
