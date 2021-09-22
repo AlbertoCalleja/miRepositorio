@@ -55,7 +55,7 @@ public class Ejecuta {
 			System.out.println(mensaje);
 		}
 		sc.close();
-		//Esto hara un conflicto
+		//Esto hara un conflicto en el codigo
 	}
 
 }
