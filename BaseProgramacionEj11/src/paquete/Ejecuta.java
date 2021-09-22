@@ -1,5 +1,8 @@
 package paquete;
 
+import java.util.Calendar;
+import java.util.Scanner;
+
 public class Ejecuta {
 
 	public static void main(String[] args) {
@@ -11,10 +14,51 @@ public class Ejecuta {
 		 * 
 		 * 
 		 */
-		
-		
-		
-
+		int agnoNacimiento;
+		int agnoActual=Calendar.getInstance().get(Calendar.YEAR);
+		String nombre;
+		String nombreMenor=null;
+		String mensaje;
+		int suma=0; //acumulador
+		int edad;
+		int contEdad=0; //contador
+		int menor=Integer.MAX_VALUE;
+		float media;
+		boolean continuar=true;
+		Scanner sc= new Scanner(System.in);
+			
+		do
+		{
+			System.out.println("Introduzca nombre:");
+			nombre=sc.nextLine();
+			
+			if(nombre.equals("fin"))
+			{
+				continuar=false;
+			}
+			else
+			{
+				System.out.println("Introduzca año de nacimiento:");
+				agnoNacimiento=Integer.valueOf(sc.nextLine());
+				
+				edad=agnoActual-agnoNacimiento;
+				contEdad ++;
+				
+				suma=suma+edad;
+				if(edad<menor)
+				{
+					menor=edad;
+					nombreMenor=nombre;
+				}
+			}
+		}while(continuar);
+		if(contEdad>0)
+		{
+			media=(float)suma/contEdad;
+			mensaje= "La media de edad es: "+media+" y el alumno más joven es: "+nombreMenor;
+			System.out.println(mensaje);
+		}
+		sc.close();
 	}
 
 }
