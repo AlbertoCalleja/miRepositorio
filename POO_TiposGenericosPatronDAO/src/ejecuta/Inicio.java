@@ -15,7 +15,7 @@ public class Inicio {
 		//RepoArticulo repoArt=new RepoArticulo();
 		//Articulo articulo1= new Articulo("a123","Monitor",300F);
 		//Articulo articulo2= new Articulo("a456","Teclado",200F);
-		//Articulo art;
+		//Articulo art; as
 		
 		RepoAlumno repoAlumno = new RepoAlumno();
 		Scanner sc= new Scanner(System.in);
@@ -52,6 +52,14 @@ public class Inicio {
 				System.out.println("Introduzca matricula");
 				matricula=Integer.valueOf(sc.nextLine());
 				alum=repoAlumno.leer(matricula);
+				
+				if(alum==null)
+				{
+					System.out.println("No encontrado.");
+				}
+				else {
+					System.out.println(alum.toString());
+				}
 				break;
 				
 			case 3:
